@@ -24,8 +24,9 @@ kubelet은 Pod의 리소스 사용량을 Pod `status`에 포함하여 보고한�
 ### 메모리
 기본적으로 바이트 단위를 사용할 수 있다. 대부분 2의 거듭제곱 단위(Mi, Gi 등)를 사용한다.
 
+## Overcommit
+사용 가능한 총 자원의 양보다 더 많은 양을 할당한 상태.
+kubectl커맨드로 노드 상태를 조회하면 다음과 같은 설명도 확인할 수 있다.
+`(Total limits may be over 100 percent, i.e., overcommitted.)`
 
-
-
-TODO:
-## CPUOverCommit
+overcommit된 상태에서 트래픽이 많아져 실제 자원 사용량(requests)가 늘어나면, 위에서 설명한 상황이 발생한다.
